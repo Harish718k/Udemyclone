@@ -19,18 +19,26 @@ header{
     padding: 10px 20px;
 }
 
+header .logo{
+    color: rgb(162, 72, 245);
+}
+
 header .searchbar{
     display: flex;
     align-items: center;
     border: 1px solid gray;
     border-radius: 30px;
+    width: 100%;
+    max-width:650px;
+    min-width: 250px;
+    margin: 0px 10px;
 }
 header .searchbar i{
     padding-left: 15px;
 }
 
 header .searchbar input{
-    min-width:250px;
+    width: 100%;
     border-radius: 30px;
     border: none;
     padding: 10px;
@@ -39,10 +47,68 @@ header .searchbar input{
 header .searchbar input:focus{
     outline: none;
 }
-header nav ul{
+nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 18px;
+}
+header .nav1 ul{
     list-style: none;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
+header .nav2{
+    width: 100%;
+}
+
+header .nav2 ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+header .nav2 ul li{
+    background-color: rgb(162, 72, 245);
+    padding: 10px 15px;
+    border-radius: 30px;
+    color: white;
+}
+
+.main .banner1{
+    width: 100%;
+    position: relative;
+}
+
+.main .banner1 img{
+    width: 100%;
+    z-index: -1;
+}
+
+.main .ad_box{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0px 3px 6px rgb(200, 200, 200);
+    padding: 20px 30px;
+    animation: ads 1s ease-in-out;
+}
+.main .ad_box h1{
+    font-size: 30px;
+    padding: 15px 0px;
+}
+
+.courses{
+    margin: 20px 10px;
+}
+
+@keyframes ads {
+    0%   {transform: scale(0);}
+    100% {transform: scale(1);}
+  }
